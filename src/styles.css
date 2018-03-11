@@ -1,0 +1,56 @@
+#root { position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: menu;
+}
+
+.container {
+  display: grid;
+	grid-template-rows: 50px auto;
+  grid-template-columns: 200px auto;
+  grid-column-gap: 20px;
+	height: 100vh;
+}
+
+.header {
+  background-color: #CCC;
+  grid-column-start: 1;
+	grid-column-end:   2;
+}
+
+.notelist {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  overflow: scroll;
+  border-right: 1px solid #CCC;
+}
+
+.note {
+  padding: 1em;
+  border-bottom: 1px solid #CCC;
+  overflow-y: hidden;
+  display: block;
+}
+
+.note:hover {
+  background-color: pink;
+}
+
+.note:global(.active) {
+  background-color: #EEE;
+}
+
+.note__body {
+  text-overflow: ellipsis;
+}
+
+.content {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
