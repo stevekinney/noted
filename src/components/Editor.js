@@ -1,5 +1,6 @@
 import React from 'react';
-import MonacoEditor from 'react-monaco-editor';
+import CodeMirror from 'react-codemirror';
+import 'codemirror/lib/codemirror.css';
 
 class Editor extends React.Component {
   handleChange = (content) => {
@@ -8,19 +9,9 @@ class Editor extends React.Component {
   }
 
   render() {
-    const { id, body, onChange } = this.props;
+    const { body } = this.props;
     return (
-      <MonacoEditor
-        width="100%"
-        height="400"
-        language="markdown"
-        theme="vs-dark"
-        value={body}
-        options={{
-          selectOnLineNumbers: true
-        }}
-        onChange={this.handleChange}
-      />
+      <CodeMirror value={body} onChange={this.handleChange} />
     );
   }
 }
