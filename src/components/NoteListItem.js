@@ -1,7 +1,7 @@
 import React from 'react';
-
-import Styles from '~/styles.css';
 import { NavLink } from 'react-router-dom';
+
+import Styles from '../styles.css';
 
 const NoteListItem = ({
   id, title, body

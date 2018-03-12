@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import _ from 'lodash';
 import { withRouter } from 'react-router-dom';
+import _ from 'lodash';
 
-import NoteView from '../components/NoteList';
+import NoteList from '../components/NoteList';
 
 const mapStateToProps = (state) => {
   const notes = _.transform(
@@ -15,4 +15,4 @@ const mapStateToProps = (state) => {
   return { notes };
 };
 
-export default withRouter(connect(mapStateToProps)(NoteView));
+export default withRouter(connect(mapStateToProps)(NoteList));
