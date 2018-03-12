@@ -1,5 +1,8 @@
 import React from 'react';
 import CodeMirror from 'react-codemirror';
+
+import Styles from '../styles.css';
+
 import 'codemirror/lib/codemirror.css';
 
 class Editor extends React.Component {
@@ -11,7 +14,17 @@ class Editor extends React.Component {
   render() {
     const { body } = this.props;
     return (
-      <CodeMirror value={body} onChange={this.handleChange} />
+      <CodeMirror
+        className={Styles.content__pane}
+        value={body}
+        onChange={this.handleChange}
+        options={{
+          mode: 'markdown',
+          lineNumbers: true,
+          lineWrapping: true,
+          autofocus: true,
+        }}
+      />
     );
   }
 }

@@ -3,10 +3,10 @@ import { Route } from 'react-router-dom';
 
 import Markdown from 'react-markdown';
 
-import Styles from '~/styles.css';
-
 import NoteHeader from './NoteHeader';
 import Editor from '../containers/EditorContainer';
+
+import Styles from '../styles.css';
 
 export default (props) => {
   const {
@@ -15,8 +15,10 @@ export default (props) => {
   return (
     <article className={Styles.content}>
       <NoteHeader title={title} match={match} />
-      <Markdown source={body} />
-      <Route path="/:id/edit" component={Editor} />
+      <div className={Styles.content__panes}>
+        <Markdown className={Styles.content__pane} source={body} />
+        <Route path="/:id/edit" component={Editor} />
+      </div>
     </article>
   );
 };

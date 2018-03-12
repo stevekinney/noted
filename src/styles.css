@@ -9,6 +9,25 @@ body {
   font: menu;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  background-color: pink;
+  color: black;
+}
+
+a:active {
+  background-color: cyan;
+  color: black;
+}
+
 .container {
   display: grid;
 	grid-template-rows: 50px auto;
@@ -17,10 +36,27 @@ body {
 	height: 100vh;
 }
 
+.emptystate {
+  display:flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .header {
-  background-color: #CCC;
+  display: flex;
+  color: #999;
+  background-color: #DDD;
   grid-column-start: 1;
-	grid-column-end:   2;
+  grid-column-end:   3;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__title {
+  padding: 0;
+  margin: 0;
 }
 
 .notelist {
@@ -38,10 +74,6 @@ body {
   display: block;
 }
 
-.note:hover {
-  background-color: pink;
-}
-
 .note:global(.active) {
   background-color: #EEE;
 }
@@ -50,7 +82,34 @@ body {
   text-overflow: ellipsis;
 }
 
+.noteheader {
+  width: 100%;
+  display: flex;
+}
+
+.noteheader__title {
+  flex: 1;
+  width: 100%;
+}
+
+.noteheader__button {
+  display: inline-block;
+  padding: 1em;
+  border: 1px solid #CCC;
+  text-align: center;
+}
+
 .content {
+  padding: 2em;
   grid-column-start: 2;
   grid-row-start: 2;
+}
+
+.content__panes {
+  height: 100%;
+  display: flex;
+}
+
+.content__pane {
+  width: 50%;
 }
