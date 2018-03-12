@@ -1,6 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 
 const configuration = require('./webpack.config');
@@ -23,5 +24,6 @@ module.exports = Object.assign({}, configuration, {
       filename: '[name].[hash].css',
     }),
     new HtmlWebpackPlugin({ template: './public/index.html' }),
+    new BundleAnalyzerPlugin(),
   ],
 });
