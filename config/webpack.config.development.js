@@ -10,12 +10,6 @@ module.exports = Object.assign({}, configuration, {
   },
   mode: 'development',
   plugins: [
-    new CopyWebpackPlugin([
-      {
-        from: 'node_modules/monaco-editor/min/vs',
-        to: 'vs',
-      }
-    ]),
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin({
       allChunks: true,
