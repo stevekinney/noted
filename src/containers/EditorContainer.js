@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import Editor from '../components/Editor';
+import LoadableEditor from '../components/LoadableEditor';
 
 const mapStateToProps = (state, ownProps) => {
   const { id } = ownProps.match.params;
@@ -20,4 +20,4 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Editor));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(LoadableEditor));

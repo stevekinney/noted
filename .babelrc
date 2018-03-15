@@ -8,6 +8,7 @@
       "rootPathSuffix": "src"
     }],
     "transform-object-rest-spread",
-    "transform-class-properties"
+    "transform-class-properties",
+    "syntax-dynamic-import"
   ]
 }
