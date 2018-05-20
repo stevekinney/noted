@@ -1,3 +1,12 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
+deploy:
+  provider: s3
+  access_key_id: AKIAJG3T5LERXZA4KTDQ
+  secret_access_key:
+    secure: Uc/EUdaa18sDNuIcdjT/f9QQnEbthSKRgVyf46y9rHZbh1PfASSLyEHYWx8ei9BLOXVVGlCqg4ggAVg+yuttfwQMIQoi0SZhbMK4GRBsitDiVUQSkQjQoZd2E+vJi1PyVE05gbyuSe+JScutOtIx0V4tXFQRvTicWwU66Git6MtQh3IJ2mHp0e0ZJ2nT8RfuIYxysUdFVpsU9U1aRi3hBimYTs8+Wg7OSCuGjMiQRmtvzXd7ZIVOluVQlYnBfKSGl3e/lVRNkqdK5zd18JH8dXaSXGBNGvHDhJqofZ/f1hOO+wCR68//FDOUhWnuO4pdPAUsOTCRHyQcmkH6PKvmjZi3U5pf5TVdxk9inm+uJO3xBBDVeSo5LdKcIpN7wxwFkg2XhQqzCG/KsRW6R4589ySmigmG5HOyd87C1OsI+tLshnDwShYmPbTL0N3IEVkiDcpEU3g/ETrDIWkUqfdM1VvyjzcT6qkJSARC//Cj3gfdjxVNlObNkmolRylr7SiX+uWJSItEVD7coEIZ71WK7kU3/BYs8XjkCd8CDlawfT+9B8Q/S4mQKENgMtloWjUbi3sT8dhCZg1rifUHeXazg7FYwV/3igmJIFNsOc3crFNZFJPYCSaUTMCx34qB9X4aH8qLlPX/lJzW3EROzONH8Gfvx+UUlKjIJZHMyZuigIg=
+  bucket: myfundemoapp.net
+  local-dir: dist
+  on:
+    repo: stevekinney/noted
