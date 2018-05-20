@@ -15,6 +15,7 @@
   "dependencies": {
     "codemirror": "^5.35.0",
     "history": "^4.7.2",
+    "jest": "^22.4.4",
     "lodash": "^4.17.5",
     "marked": "^0.3.17",
     "moment": "^2.21.0",
