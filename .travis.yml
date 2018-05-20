@@ -10,3 +10,8 @@ deploy:
   local-dir: dist
   on:
     repo: stevekinney/noted
+    branch: master
+  after_deploy:
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+
