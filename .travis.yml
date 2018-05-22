@@ -4,6 +4,9 @@ node_js:
 script:
 - npm test
 - npm run build
+before_install:
+- pip install --user awscli
+- export PATH=$PATH:$HOME/.local/bin
 deploy:
   provider: s3
   access_key_id: AKIAJG3T5LERXZA4KTDQ
