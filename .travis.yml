@@ -12,7 +12,6 @@ deploy:
   bucket: myfundemoapp.net
   skip_cleanup: true
   local-dir: dist
-  acl: public-read
   on:
     repo: stevekinney/noted
     branch: master
