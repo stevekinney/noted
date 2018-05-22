@@ -18,5 +18,5 @@ deploy:
 after_deploy:
 - echo lolololol
 - aws configure set preview.cloudfront true
-- aws cloudfront create-invalidation --distribution-id E3U8Q34NJRFZ8Y --paths "/index.html"
+- aws cloudfront create-invalidation --distribution-id E3U8Q34NJRFZ8Y --paths "/*"
 
