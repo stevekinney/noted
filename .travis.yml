@@ -16,7 +16,7 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: myfundemoapp.net
   skip_cleanup: true
-  local-dir: dist
+  local-dir: build
   on:
     branch: master
 after_deploy:
