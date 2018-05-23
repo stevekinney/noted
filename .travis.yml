@@ -6,10 +6,10 @@ cache:
   directories:
     - node_modules
 script:
-  - npm test
+  - yarn test
 before_deploy:
-  - npm install -g travis-ci-cloudfront-invalidation
-  - npm run build
+  - yarn global add travis-ci-cloudfront-invalidation
+  - yarn run build
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
@@ -21,5 +21,5 @@ deploy:
     repo: stevekinney/noted
     branch: master
 after_deploy:
-  - travis-ci-cloudfront-invalidation -a $AWS_ACCESS_KEY_ID -s $AWS_SECRET_ACCESS_KEY -c E3U8Q34NJRFZ8Y -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST -o 'master,stage'
+  - travis-ci-cloudfront-invalidation -a $AWS_ACCESS_KEY_ID -s $AWS_SECRET_ACCESS_KEY -c $CLOUDFRONT_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
 
