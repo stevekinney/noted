@@ -17,7 +17,7 @@ export default (props) => {
       <NoteHeader title={title} match={match} />
       <div className={Styles.content__panes}>
         <Markdown className={Styles.content__pane} source={body} />
-        <Route path="/:id/edit" component={Editor} />
+        <Route path="/notes/:id/edit" component={Editor} />
       </div>
     </article>
   );

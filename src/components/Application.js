@@ -14,7 +14,7 @@ const Application = () => (
     </header>
     <NoteListContainer />
     <Route exact path="/" component={EmptyState} />
-    <Route path="/:id" component={NoteViewContainer} />
+    <Route path="/notes/:id" component={NoteViewContainer} />
   </div>
 );
 

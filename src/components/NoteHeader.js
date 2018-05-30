@@ -10,7 +10,7 @@ const EditButton = ({ match }) => (
 );
 
 const ViewButton = ({ match }) => (
-  <Link className={Styles.noteheader__button} to={`/${match.params.id}`}>
+  <Link className={Styles.noteheader__button} to={`/notes/${match.params.id}`}>
     View
   </Link>
 );
@@ -19,8 +19,8 @@ const NoteHeader = ({ title, match }) => (
   <header className={Styles.noteheader}>
     <h2 className={Styles.noteheader__title}>{title}</h2>
     <div>
-      <Route exact path="/:id" component={EditButton} />
-      <Route path="/:id/edit" component={ViewButton} />
+      <Route exact path="/notes/:id" component={EditButton} />
+      <Route path="/notes/:id/edit" component={ViewButton} />
       <Link className={Styles.noteheader__button} to="/">Close</Link>
     </div>
   </header>

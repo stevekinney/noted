@@ -11,7 +11,7 @@ const initialState =
     3: {
       title: 'Hello World',
       body: 'Lorem ipsum'
-    }
+    },
   };
 
 export default (state = initialState, action) => {

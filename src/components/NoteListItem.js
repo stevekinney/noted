@@ -7,7 +7,7 @@ const NoteListItem = ({
   id, title, body
 }) => {
   const display = body.length > 100 ? `${body.slice(0, 100)}…` : body;
-  const destination = `/${id}`;
+  const destination = `/notes/${id}`;
 
   return (
     <NavLink to={destination} className={Styles.note}>
